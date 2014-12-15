@@ -1,3 +1,15 @@
+<?php
+require_once 'app/init.php';
+if (isset ($_GET['q'])) {
+   $q = $_GET ['q'];
+// Search:
+$params = array(
+    'index' => 'my_app',
+    'type'  => 'blog_post'
+);
+$params['body']['query']['match']['title'] = 'elasticsearch';
+$results = $es->search($params);
+?>
 <!DOCTYPE php>
 <html>
 	<head>
