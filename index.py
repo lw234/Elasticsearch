@@ -43,6 +43,6 @@ class StreamListener(tweepy.StreamListener):
 streamer = tweepy.Stream(auth=auth, listener=StreamListener(), timeout=3000000000 )
 
 #Fill with your own Keywords bellow
-terms = ['Soccer', 'The Voice', 'Shopping']
+terms = ['Sunday', 'North Face', 'Deal']
 
 streamer.filter(None,terms)
