@@ -6,11 +6,11 @@ from datetime import datetime
 from elasticsearch import Elasticsearch
 
 
-consumer_key="9ItHkldzY6eCY33NGOvBWZWdk"
-consumer_secret="owVuUOEgFEV8IRvTPtlpGQUjPUcNGVkjE7UmBlpYoURIelpypc"
+consumer_key=""
+consumer_secret=""
 
-access_token="2232025849-Uha9cnBLS5cncwSB89TBl26tsSz8DSUlkZF7aOd"
-access_token_secret="S1vkHd9y4KAlBT86cfBQYC7sbivy7NXesFny79jMFmo2c"
+access_token=""
+access_token_secret=""
 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -43,6 +43,6 @@ class StreamListener(tweepy.StreamListener):
 streamer = tweepy.Stream(auth=auth, listener=StreamListener(), timeout=3000000000 )
 
 #Fill with your own Keywords bellow
-terms = ['Z100']
+terms = ['Soccer', 'The Voice', 'Shopping']
 
 streamer.filter(None,terms)
